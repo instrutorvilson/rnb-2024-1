@@ -2,9 +2,9 @@ import { Text, View, StyleSheet, TextInput, Button } from "react-native"
 import { useState } from 'react'
 
 export default function Conceito() {
-    const [nome, setNome] = useState('Joana')
+    const [nome, setNome] = useState('')
     return (
-        <View style={styles.container}>
+        <View>
             <Text style={styles.title}>Hello {nome}</Text>
             <TextInput
                 style={styles.input}

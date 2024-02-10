@@ -1,13 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Conceito from './Conceito';
+import NomeSobrenome from './NomeSobrenome';
 
 export default function App() {
   
   return (
     <View style={styles.container}>
       <Conceito />
+      <NomeSobrenome />
       <StatusBar style="auto" />
     </View>
   );

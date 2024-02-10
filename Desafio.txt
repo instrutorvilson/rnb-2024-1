@@ -1,0 +1,2 @@
+1) Criar um componente que permit a ao usuário informar o nome e o sobrenome de uma pessoa. mostre o nome completo em um componente Text.
+

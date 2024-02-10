@@ -1,0 +1,29 @@
+node --version
+https://expressjs.com/pt-br/
+ Framework
+
+http://localhost:3000
+
+middleware
+
+https://github.com/instrutorvilson/rnb-2024-1
+
+GET -> http://localhost:3000/contatos
+GET -> http://localhost:3000/contatos/1
+DELETE -> http://localhost:3000/contatos/1
+POST ->  http://localhost:3000/contatos
+PUT -> http://localhost:3000/contatos/1
+
+https://reactnative.dev/
+
+android studio (java) -> android
+swift  -> IOS
+
+react native -> android IOS (javascript) componentes
+ionic        -> android IOS (Javascript) componentes
+
+flutter      -> android IOS (dart)       widgets
+
+cordova -> HTML e CSS -> gera app
+
+

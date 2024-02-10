@@ -18,8 +18,22 @@ app.get('/contatos', (req, res) => {
 })
 
 app.get('/contatos/:id', (req, res) => {
-  res.send(`Contato: ${req.params.id} `)
+ var contato = contatos.filter(ct => ct.id == req.params.id)[0]
+ if(contato != null)
+    res.send(contato)
+ else
+   res.status(404).send({message:"Contato não encontrado"})
 })
+
+app.delete('/contatos/:id', (req, res) => {
+  var contato = contatos.filter(ct => ct.id == req.params.id)[0]
+  if(contato != null){
+    contatos.splice(getPosicaoContato(contato.id), 1)
+    res.status(204).send()
+  }     
+  else
+    res.status(404).send({message:"Contato não encontrado"})
+ })
 
 
 app.post("/contatos", (req, res) => {
@@ -36,3 +50,14 @@ app.post("/contatos", (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+function getPosicaoContato(id){
+  let posicao = -1
+  for(let i = 0; i < contatos.length; i++){
+    if(contatos[i].id == id){
+      posicao = i
+      break
+    }
+  }
+  return posicao
+}

@@ -9,10 +9,6 @@ const contatos = [
 
 app.use(express.json())
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
 app.get('/contatos', (req, res) => {
     res.send(contatos)
 })
@@ -30,6 +26,18 @@ app.delete('/contatos/:id', (req, res) => {
   if(contato != null){
     contatos.splice(getPosicaoContato(contato.id), 1)
     res.status(204).send()
+  }     
+  else
+    res.status(404).send({message:"Contato não encontrado"})
+ })
+
+ app.put('/contatos/:id', (req, res) => {
+  var contato = contatos.filter(ct => ct.id == req.params.id)[0]
+  if(contato != null){
+    contato.nome = req.body.nome
+    contato.email = req.body.email
+    contato.fone = req.body.fone
+    res.status(200).send(contato)
   }     
   else
     res.status(404).send({message:"Contato não encontrado"})

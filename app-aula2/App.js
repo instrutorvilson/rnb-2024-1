@@ -1,15 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 
 export default function App() {
-  const [peso, setPeso] = useState(95.5)
-  const [altura, setAltura] = useState(1.69)
+  const [peso, setPeso] = useState('')
+  const [altura, setAltura] = useState('')
   const [indice, setIndice] = useState()
   const [situacao, setSituacao] = useState()
 
+  const pesoRef = useRef(null)
+  const alturaRef = useRef(null)
+
   function calcularIndice() {
+    if(peso == ''){
+      alert('Informe peso')
+      pesoRef.current.focus()
+      return
+    }
+
+    if(altura == ''){
+      alert('Informe altura')
+      alturaRef.current.focus()
+      return
+    }
+
     let x = peso / (altura * altura)
     setIndice(x)
     let status = 'Muito abaixo do peso'
@@ -36,9 +51,11 @@ export default function App() {
 
       <Text style={styles.label}>Informe peso</Text>
       <TextInput
+        placeholder='Ex: 95.5'
         style={styles.input}
         defaultValue={peso}
         onChangeText={(txt) => setPeso(txt)}
+        ref={pesoRef}
       />
 
       <Text style={styles.label}>Informe altura</Text>
@@ -46,6 +63,8 @@ export default function App() {
         style={styles.input}
         defaultValue={altura}
         onChangeText={(txt) => setAltura(txt)}
+        ref={alturaRef}
+        placeholder='Ex: 1.74'        
       />
 
       <TouchableOpacity
@@ -56,8 +75,12 @@ export default function App() {
       </TouchableOpacity>
 
       <View style={styles.containerResultado}>
-        <Text style={styles.label}>Indice: {indice}</Text>
-        <Text style={styles.label}>Situação: {situacao}</Text>
+        <Text style={styles.label}>Indice:  
+          <Text style={{color:'red', marginLeft:'10px'}}>{indice}</Text>
+        </Text>
+        <Text style={styles.label}>Situação: 
+          <Text style={{color:'blue', marginLeft:'10px'}}>{situacao}</Text>
+        </Text>
       </View>
       <StatusBar style="auto" />
     </View>

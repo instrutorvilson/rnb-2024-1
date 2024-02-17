@@ -1,0 +1,8 @@
+criar novo app
+> npx create-expo-app app-aula2
+
+Rodar aplicação
+> npm run web
+
+instalar dependências do toast
+> npm install react-native-toast-message

@@ -1,0 +1,12 @@
+1) Criar um aplicativo que calcule o indice de massa corporal de uma pessoa e mostre sua situação.
+https://www.calculoimc.com.br/
+
+> criar novo app
+npx create-expo-app app-aula2
+
+> Rodar aplicação
+npm run web
+
+2) Criar um aplicativo que leia a idade de uma pessoa e mostre qual o signo do zoodiaco.
+
+https://github.com/instrutorvilson/rnb-2024-1

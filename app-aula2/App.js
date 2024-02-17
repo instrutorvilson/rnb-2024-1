@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useRef, useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-
+import Toast from 'react-native-toast-message'
 
 export default function App() {
   const [peso, setPeso] = useState('')
@@ -14,19 +14,33 @@ export default function App() {
 
   function calcularIndice() {
     if(peso == ''){
-      alert('Informe peso')
+      //alert('Informe peso')
+      Toast.show({
+        type: 'error',
+        text1: 'Entrada inválida',
+        text2: 'Informe o peso',
+        visibilityTime: 3000
+      });
+
       pesoRef.current.focus()
       return
     }
 
     if(altura == ''){
-      alert('Informe altura')
+      //alert('Informe altura')
+      Toast.show({
+        type: 'error',
+        text1: 'Entrada inválida',
+        text2: 'Informe a altura',
+        visibilityTime: 3000
+      });
       alturaRef.current.focus()
       return
     }
 
     let x = peso / (altura * altura)
     setIndice(x)
+    
     let status = 'Muito abaixo do peso'
     
     if (x > 17 && x < 18.49)
@@ -82,6 +96,8 @@ export default function App() {
           <Text style={{color:'blue', marginLeft:'10px'}}>{situacao}</Text>
         </Text>
       </View>
+     
+      <Toast ref={(ref) => Toast.setRef(ref)} />
       <StatusBar style="auto" />
     </View>
   );

@@ -1,0 +1,109 @@
+{
+  "frutas": [
+    {
+      "id": "1",
+      "tipo": "citrica",
+      "nome": "laranja"
+    },
+    {
+      "id": "2",
+      "tipo": "citrica",
+      "nome": "Limão"
+    },
+    {
+      "id": "09f0",
+      "nome": "Manga",
+      "tipo": "citrica"
+    },
+    {
+      "id": "32b1",
+      "nome": "Morango",
+      "tipo": "teste"
+    },
+    {
+      "id": "fb06",
+      "nome": "Milho",
+      "tipo": "cereal"
+    },
+    {
+      "id": "6117",
+      "nome": "uva",
+      "tipo": "vinho"
+    },
+    {
+      "id": "29e2",
+      "nome": "uva",
+      "tipo": "vinho"
+    },
+    {
+      "id": "a05a",
+      "nome": "uva",
+      "tipo": "vinho"
+    },
+    {
+      "id": "7e5b",
+      "nome": "s",
+      "tipo": "s"
+    },
+    {
+      "id": "7c8d",
+      "nome": "",
+      "tipo": "s"
+    },
+    {
+      "id": "1c9f",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "4a00",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "d2af",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "4b0e",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "846e",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "6368",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "6b6b",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "d92b",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "487b",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "c5a9",
+      "nome": "",
+      "tipo": ""
+    },
+    {
+      "id": "9365",
+      "nome": "",
+      "tipo": ""
+    }
+  ]
+}

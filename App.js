@@ -5,6 +5,9 @@ import Consulta from './src/componentes/Consulta'
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+import Toast from 'react-native-toast-message'
+
 import Emissor from './src/componentes/Emissor'
 import Receptor from './src/componentes/Receptor'
 const Stack = createNativeStackNavigator()
@@ -38,6 +41,7 @@ export default function App() {
               component={Receptor}
            />
         </Stack.Navigator>
+        <Toast />
     </NavigationContainer>
   );
 }

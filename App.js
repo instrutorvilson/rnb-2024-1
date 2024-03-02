@@ -5,6 +5,8 @@ import Consulta from './src/componentes/Consulta'
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Emissor from './src/componentes/Emissor'
+import Receptor from './src/componentes/Receptor'
 const Stack = createNativeStackNavigator()
 
 export default function App() {
@@ -24,6 +26,16 @@ export default function App() {
           <Stack.Screen 
               name='consulta'
               component={Consulta}
+           />
+
+           <Stack.Screen 
+              name='emissor'
+              component={Emissor}
+           />
+
+          <Stack.Screen 
+              name='receptor'
+              component={Receptor}
            />
         </Stack.Navigator>
     </NavigationContainer>

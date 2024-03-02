@@ -16,6 +16,13 @@ export default function Home({navigation}){
             >
                 <Text>Consulta</Text>
             </Pressable>
+
+            <Pressable
+              style={styles.btmenu}
+              onPress={() => navigation.navigate('emissor')}
+            >
+                <Text>Emissor mensagem</Text>
+            </Pressable>
         </View>
     )
 }
